@@ -1,12 +1,19 @@
 <?php 
 /**
-* 
+*  Class for manage the game with users
+ *
 */
 class users implements handle
 {
 	public $userA='userA';
 	public $userB='userB';
-	
+/**
+ *  PLAY THE GAME
+ * @params $userA
+ * @params $handA
+ * @params $userB
+ * @params $handB
+ */
 	public function play($userA,$handA,$userB,$handB)
 	{
 		$msg = $this->checkHands($handA,$handB);
@@ -24,6 +31,11 @@ class users implements handle
 		}
 		return $msg;
 	}
+/**
+ *  Check possible errors with the the hand's input
+ * @params $handA
+ * @params $handB
+ */
 	public function checkHands($handA,$handB)
 	{
 		$msg = "";
